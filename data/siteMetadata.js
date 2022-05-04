@@ -1,21 +1,18 @@
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  title: 'Tibo Gabriels',
+  author: 'TiboGabriels',
+  headerTitle: 'Tibo Gabriels',
+  description: 'Developer & Maker',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://tibo.gabriels.dev',
+  siteRepo: 'https://github.com/TiboGabriels/tibo.gabriels.dev',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  email: 'tibo@gabriels.dev',
+  github: 'https://github.com/TiboGabriels',
+  linkedin: 'https://www.linkedin.com/in/tibo-gabriels-b3598b19b/',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
@@ -28,7 +25,7 @@ const siteMetadata = {
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue
-    // Please add your .env file and modify it according to your selection
+    // Please add your .env.development.local file and modify it according to your selection
     provider: 'buttondown',
   },
   comment: {
