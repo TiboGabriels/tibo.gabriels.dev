@@ -1,19 +1,11 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
-  },
-  {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Horizon: Zero Dawn - Tallneck model',
+    description: `Horizon: Zero Dawn has been captivating my imagination recently, it's world building and scenery alone is just amazing.
+    So since i was looking for a new 3d printing project, (this model)[https://www.thingiverse.com/thing:3570696]
+    by Gloomeskk and remixed by blarbles over at thingiverse was just perfect. Let the day long prints begin!`,
+    imgSrc: '/static/images/tallneck/example_result.jpg',
+    href: '/blog/Tallneck-model/horizon-zd-tallneck',
   },
 ]
 
