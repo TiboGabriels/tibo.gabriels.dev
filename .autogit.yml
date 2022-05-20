@@ -29,6 +29,8 @@ hooks:
   install_before: |
     exit 0
   install_after: |
+    npm install
+    npm run build
     exit 0
 
 # SHAREDSYMLINK: Create symlink to shared files and folders
