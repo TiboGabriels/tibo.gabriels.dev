@@ -31,6 +31,8 @@ hooks:
   install_after: |
     npm install
     npm run build
+    mkdir www
+    cp ./* ./www/
     exit 0
 
 # SHAREDSYMLINK: Create symlink to shared files and folders
