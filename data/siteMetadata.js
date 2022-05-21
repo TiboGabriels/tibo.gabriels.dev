@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/TiboGabriels/tibo.gabriels.dev',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/favicons/android-chrome-512x512.png',
   email: 'tibo@gabriels.dev',
   github: 'https://github.com/TiboGabriels',
   linkedin: 'https://www.linkedin.com/in/tibo-gabriels-b3598b19b/',
