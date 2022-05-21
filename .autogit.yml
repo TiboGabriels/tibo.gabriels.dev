@@ -44,6 +44,7 @@ hooks:
   symlink_before: |
     exit 0
   symlink_after: |
+    npm run start
     exit 0
 
 # CLEANUP: Cleanup old releases, two most recent releases remaining
