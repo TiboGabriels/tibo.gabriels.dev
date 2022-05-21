@@ -1,16 +1,50 @@
 ---
-title: 'Lets Talk IoT'
-date: '2021-01-31'
-lastmod:
-tags: ['IoT', 'seminar', 'Trend-Micro']
-draft: true
-summary:
-images: []
+title: "LetstalkIoT: Don't do crypto!"
+date: '2022-04-2'
+lastmod: '2022-04-2'
+tags: ['IoT', 'seminar', 'Trend-Micro', 'Cryptography']
+draft: false
+summary: "On March 29, Trend Micro held a seminar concerning cryptography and IoT. How do you handle encryption on microcontrollers?
+Udo Schneider, IoT Security Evangelist in Europe, answered exactly that."
+images: ['/static/images/letstalkiot.jpg']
 authors:
 ---
 
-Draft post which should not display
-'gdh'
+On March 29, [Trend Micro](https://www.trendmicro.com) held a seminar concerning cryptography and IoT. How do you handle encryption on microcontrollers?
+[Udo Schneider](https://www.linkedin.com/in/udoschneider/), IoT Security Evangelist in Europe, answered exactly that.
 
-cfgh
-diplay
+![Lets Talk IoT](/static/images/letstalkiot.jpg)
+Udo started off talking about cryptography basics: Caesar cypher, transposition cypher, ... Nothing very new for me, but
+what i didn't realize until now was how modern encryption is often build upon these basic methods but combined to form
+a more complex algorithm.
+
+# PRNGs
+
+He continued to talk about random number generation, and the importance of choosing the right method. Not all number generation is created equal, and pretty much any
+implementation is pseudo random. An interesting method is using the movement of lava lamps or the cosmic background radiation. While not random, it is complex
+and unpredictable enough to be used for modern encryption.
+
+# Hashes
+
+Using modern and secure hashing algorithms is also very important, md5 and sha1 are simply broken these days. You might as well use plain text instead.
+
+Another point is using the right kind of encryption.
+[ECB (electronic codebook mode encryption)](<https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Electronic_codebook_(ECB)>) chains multiple algorithms but with the same key.
+This means that, even tough the data is encrypted, there is still an inherent structure that makes it easier to break the encryption.
+This is very apparent with images. [CBC (Cypher block chaining)](<https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Cipher_block_chaining_(CBC)>) on the other
+hand does not make this kind of structure, but actually produced near white noise.
+
+# Keys in Firmware... NOT!
+
+Hiding keys in firmware might seem secure, but this is not the case. Someone with reverse-engineering experience and tools
+can easily decrypt this. So don't rely on compilation to hide your keys or passwords. In the case of microcontrollers, many of these
+have built in encryption modules you can use, and if not. You should include one in your design if you need encryption.
+
+# Conclusion
+
+In the end, you can conclude that most developers aren't experts in encryption. So if you don't know what you are doing
+with encryption, then use existing, known and secure libraries.
+
+- Know your crypto! What to use when, where & how
+- Don't build your own: it's way too easy to screw up
+- Rely on proven frameworks & protocols: trust but verify!
