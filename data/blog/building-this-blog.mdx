@@ -1,0 +1,38 @@
+---
+title: 'Building this blog'
+date: '2022-05-20'
+lastmod: '2022-05-22'
+tags: ['next.js', 'node.js', 'blog', 'Digital Ocean', 'deployment', 'DevOps', '2022']
+draft: false
+summary: "After Z-Hacks I wanted to expand my experience with Next.js. I still needed to build a portfolio site
+which led me to this repo: Tailwind Nextjs Starter Blog, an awesome blog template by timlrx based on Next.js and Tailwind-CSS. I was instantly sold and
+clicked that fork button."
+images: []
+---
+
+After [Z-Hacks](/blog/z-hacks) I wanted to expand my experience with Next.js. I still needed to build a portfolio site
+which led me to this repo:[Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog),
+an awesome blog template by [timlrx](https://github.com/timlrx) based on Next.js and Tailwind-CSS. I was instantly sold and
+clicked that fork button.
+
+## Tailwind Nextjs Starter Blog
+
+This template came with a lot of features, such as comments, newsletters, etc..., most of which I didn't need. Removing them however, was very easy.
+Blog posts are created simply by writing markdown files. This can be expanded on with JSX code including HTML which offers
+great flexibility to tinker with layout and styling without having to create one off components or layouts.
+
+## Dependency hell
+
+After the site was done there was the matter of deployment, I already had a domain name and hosting that I shared with my brother [Ralf Gabriels](https://ralf.gabriels.dev),
+make sure you take a look at his [GitHub](https://github.com/RalfG)!
+This hosting sadly limited my access to the Linux server underneath. So I had trouble getting Next.js to compile or run.
+Nothing like NPM errors to ruin your day.
+
+After discussion with a close friend, we decided switching to containers would be a better alternative, which prompted
+me to use [Digital Ocean](https://www.digitalocean.com/).
+
+## Digital Ocean to the Rescue
+
+After just a few minutes and minimal googling, I had my app deployed
+and my domain name transferred. It really was that simple! The UI reminded me a lot of Portainer, an awesome tool for managing
+your own containers. Take a look at my article on [Portainer](/blog/portainer-guide)!
