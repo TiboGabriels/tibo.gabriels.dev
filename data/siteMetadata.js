@@ -5,7 +5,7 @@ const siteMetadata = {
   description: 'Developer & Maker',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tibo-gabriels.be',
+  siteUrl: 'https://tibo.gabriels.dev',
   siteRepo: 'https://github.com/TiboGabriels/tibo.gabriels.dev',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
