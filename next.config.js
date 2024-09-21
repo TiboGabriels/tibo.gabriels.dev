@@ -1,4 +1,3 @@
-const { withContentlayer } = require('next-contentlayer2')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -53,30 +52,18 @@ const securityHeaders = [
     value: 'camera=(), microphone=(), geolocation=()',
   },
 ]
-const output = process.env.EXPORT ? 'export' : undefined
-const basePath = process.env.BASE_PATH || undefined
-const unoptimized = process.env.UNOPTIMIZED ? true : undefined
 
-
-module.exports = () => {
-  const plugins = [withContentlayer, withBundleAnalyzer]
-  return plugins.reduce((acc, next) => next(acc), {
-    output,
-    basePath,
-    reactStrictMode: true,
-    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-    eslint: {
-      dirs: ['app', 'components', 'layouts', 'scripts'],
-    },
-    images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'picsum.photos',
-        },
-      ],
-      unoptimized,
-    },
+module.exports = withBundleAnalyzer({
+  output: 'export',
+  images: {
+      unoptimized: true
+  },
+  basePath: "/"
+  reactStrictMode: true,
+  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  eslint: {
+    dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
+  },
   async headers() {
     return [
       {
