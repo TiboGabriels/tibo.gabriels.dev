@@ -58,7 +58,7 @@ module.exports = withBundleAnalyzer({
   images: {
       unoptimized: true
   },
-  basePath: "/",
+  basePath: '/',
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {
