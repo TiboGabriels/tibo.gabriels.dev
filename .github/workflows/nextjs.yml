@@ -53,9 +53,6 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -71,7 +68,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: check
-        run: ls -lah /
+        run: ls -lah 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
